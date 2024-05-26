@@ -3,6 +3,8 @@
 An attempt at making an AI learn to play the game [Celeste](https://store.steampowered.com/app/504230/Celeste/) using [Neuroevolution of Augmenting Topologies (NEAT)](https://en.wikipedia.org/wiki/Neuroevolution_of_augmenting_topologies), specifically [neat-python](https://neat-python.readthedocs.io/en/latest/).
 It uses data fetched directly from the game engine at runtime using [this instrumentation framework](https://github.com/hdrien0/Celeste-Instrumentation).
 
+Thanks to @zteboui for the original idea and the help!
+
 ## Overview
 
 Video demo :
