@@ -35,6 +35,7 @@ class CelesteNeat:
         # see the FileReporter class in FileReporter.py to see what it does
         stats = neat.StatisticsReporter()
         p.add_reporter(stats)
+        p.add_reporter(neat.StdOutReporter(True))
         if not os.path.exists(self.output_folder):
             os.makedirs(self.output_folder)
         p.add_reporter(neat.Checkpointer(1,10000,self.output_folder + "/neat-checkpoint-"))
