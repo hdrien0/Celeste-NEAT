@@ -35,6 +35,8 @@ class CelesteNeat:
         # see the FileReporter class in FileReporter.py to see what it does
         stats = neat.StatisticsReporter()
         p.add_reporter(stats)
+        if not os.path.exists(self.output_folder):
+            os.makedirs(self.output_folder)
         p.add_reporter(neat.Checkpointer(1,10000,self.output_folder + "/neat-checkpoint-"))
 
         socket_server = SocketServer()
@@ -59,5 +61,5 @@ if __name__ == '__main__':
     session_parameters.TimeoutSeconds = 5
     session_parameters.ObjectiveXCoordinate = 282
     session_parameters.ObjectiveYCoordinate = -24
-    celeste_neat = CelesteNeat(session_parameters, 'celeste_neat_config', 'run-1')
+    celeste_neat = CelesteNeat(session_parameters, 'celeste_neat_config', 'run-0')
     celeste_neat.run()
