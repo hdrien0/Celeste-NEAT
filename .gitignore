@@ -1,0 +1,10 @@
+neat-python
+__pycache__
+venv
+.vs
+bin
+*.egg-info
+*.egg
+runs
+build
+runs-*
